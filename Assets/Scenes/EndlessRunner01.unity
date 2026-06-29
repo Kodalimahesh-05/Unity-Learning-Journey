@@ -147,7 +147,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256454681}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 83438a434bcd34a08b0bf9c34195a126, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -258,7 +258,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!114 &256454687
 MonoBehaviour:
@@ -272,7 +272,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5bb3be9963e405cbbe99aa381096bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
+  rb: {fileID: 256454686}
+  Forwardspeed: 1200
+  sidewayspeed: 1400
+  speed: 8
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,7 +675,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965776667}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 83438a434bcd34a08b0bf9c34195a126, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -752,8 +755,8 @@ Transform:
   m_GameObject: {fileID: 1965776667}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.56}
-  m_LocalScale: {x: 8.7, y: 1, z: 29.39}
+  m_LocalPosition: {x: 0.6, y: 0, z: 63.7}
+  m_LocalScale: {x: 9.868297, y: 1, z: 146.76956}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
