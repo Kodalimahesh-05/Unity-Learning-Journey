@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float Forwardspeed = 2000f;
     public float sidewayspeed = 500f;
     public float speed = 5f;
-    void Update()
+    void FixedUpdate()
     {
         rb.AddForce(0, 0, Forwardspeed * Time.deltaTime);
 
@@ -18,5 +18,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(sidewayspeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }    
+        if (rb.position.y < -5f)
+        {
+            FindAnyObjectByType<GameManager>().EndGame();
+        }
     }
 }
