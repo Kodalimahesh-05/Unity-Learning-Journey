@@ -8,8 +8,14 @@ public class GameManager : MonoBehaviour
     public float restartDelay = 3f;
     public PlayerMovement movement;
     public TextMeshProUGUI GameOverText;
-   public void EndGame()
-   {
+    public GameObject LevelCompleteUI;
+
+    public void CompleteLevel()
+    {
+        LevelCompleteUI.SetActive(true);
+    }
+    public void EndGame()
+    {
         if (gameHasEnded == false)
         {
             gameHasEnded = true;
@@ -17,11 +23,10 @@ public class GameManager : MonoBehaviour
             movement.enabled = false;
             GameOverText.gameObject.SetActive(true);
             Invoke("Restart", 3f);
-
         }
-   }
-   public void Restart()
-   {
+    }
+    public void Restart()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-   }
+    }
 }
