@@ -1137,6 +1137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndTrigger
   gameManager: {fileID: 1892018340}
+  movement: {fileID: 1502994475}
+  LevelCompleteUI: {fileID: 380125266}
 --- !u!1001 &432923383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1907,10 +1909,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8903381843804552714, guid: 23591e933b5de4756af6f4f72a8e4bbb, type: 3}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 1892018340}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2401,7 +2399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554483848cefe4d40a6a652ddb87c5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  levelLoadDelay: 2
+  restartDelay: 3
   movement: {fileID: 1502994475}
   GameOverText: {fileID: 1572769215}
   LevelCompleteUI: {fileID: 380125266}
