@@ -1,5 +1,3 @@
-using System;
-using System.Data.Common;
 using UnityEngine;
 
 public class HelloWorld : MonoBehaviour
