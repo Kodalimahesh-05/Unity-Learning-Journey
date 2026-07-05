@@ -13,6 +13,7 @@ public class ObstacleDestroy : MonoBehaviour
     {
         if (player.transform.position.z > transform.position.z + 30f)
         {
+            ObstacleSpawner.instance.ObstaclePassed();
             Destroy(gameObject);
         }
     }
