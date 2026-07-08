@@ -7,7 +7,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject shortObstaclePrefab;
     public GameObject mediumObstaclePrefab;
     public GameObject longObstaclePrefab;
-    public float spawnDistance = 30f;
+    public float spawnDistance = 100f;
     public GameObject player;
     public static ObstacleSpawner instance;
     private int obstaclesPassed = 0;
