@@ -526,6 +526,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -666,6 +667,21 @@ MonoBehaviour:
   player: {fileID: 1337182090}
   speed: 4.5
   offset: {x: 0, y: 3.2, z: -10}
+  shakeOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7f458355ec94711951f4c28446700c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
+  shakeDuration: 0.3
+  shakeMagnitude: 0.2
 --- !u!1 &380125266
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +975,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1709,9 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24602f0a56f9748ce8dfb0856f4f81bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  shortObstaclePrefab: {fileID: 3514687269147734527, guid: 373a64d8877c24f70bbf029efe70f7cf, type: 3}
-  mediumObstaclePrefab: {fileID: 7113315522526130086, guid: 842aebfae036247fc9d7edbc9008acb1, type: 3}
-  longObstaclePrefab: {fileID: 1170312703929821905, guid: 8a3c298f3290a45598c04387b8cc0ec0, type: 3}
+  asteroidPrefab: {fileID: 1879996042777803757, guid: ddf84a98150c74d85b3956e94968033c, type: 3}
   spawnDistance: 30
   player: {fileID: 1467279097}
 --- !u!1 &1892018339
@@ -1776,7 +1790,7 @@ GameObject:
   - component: {fileID: 1965776668}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,5 +16,9 @@ public class ObstacleDestroy : MonoBehaviour
             ObstacleSpawner.instance.ObstaclePassed();
             Destroy(gameObject);
         }
+        if (transform.position.y < -10f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
