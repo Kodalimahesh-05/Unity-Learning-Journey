@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,14 +14,28 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rb.AddForce(-sidewayspeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            RotatePlayerleft(-1);
         }
         if (Input.GetKey(KeyCode.D))
         {
             rb.AddForce(sidewayspeed * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            RotatePlayerright(1);
         }    
         if (rb.position.y < -5f)
         {
             FindAnyObjectByType<GameManager>().EndGame();
         }
+    }
+
+    void RotatePlayerleft(int direction)
+    {
+        float rotationAmount = direction * speed * Time.deltaTime;
+        transform.Rotate(0, rotationAmount, 3);
+    }
+
+    void RotatePlayerright(int direction)
+    {
+        float rotationAmount = direction * speed * Time.deltaTime;
+        transform.Rotate(0, rotationAmount, -3);
     }
 }
