@@ -23,7 +23,7 @@ public class ObstacleSpawner : MonoBehaviour
     public void ObstaclePassed()
     {
         obstaclesPassed++;
-        if (obstaclesPassed >= 20)
+        if (obstaclesPassed >= 25)
         {
             obstaclesPassed = 0;
             SpawnBurst();
@@ -42,9 +42,9 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnBurst()
     {
-        for (int i = 1; i <= 30; i++)
+        for (int i = 1; i <= 20; i++)
         {
-            float spawnZ = transform.position.z + (i * 30f) + 35f;
+            float spawnZ = transform.position.z + (i * 25f) + 35f;
             float xlocation = Random.Range(-1f, 1f);
             GameObject obs = Instantiate(asteroidPrefab, new Vector3(xlocation, 30f, spawnZ), Quaternion.identity);
         }

@@ -16,7 +16,7 @@ public class CameraShake : MonoBehaviour
             float xOffset = Random.Range(-1f, 1f) * shakeMagnitude;
             float yOffset = Random.Range(-1f, 1f) * shakeMagnitude;
             cameraFollow.shakeOffset = new Vector3(xOffset, yOffset, 0);
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
 

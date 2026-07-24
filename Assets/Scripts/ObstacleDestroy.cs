@@ -11,7 +11,7 @@ public class ObstacleDestroy : MonoBehaviour
 
     void Update()
     {
-        if (player.transform.position.z > transform.position.z + 30f)
+        if (player.transform.position.z > transform.position.z + 20f)
         {
             ObstacleSpawner.instance.ObstaclePassed();
             Destroy(gameObject);

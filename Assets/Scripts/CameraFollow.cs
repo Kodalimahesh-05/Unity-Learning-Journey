@@ -7,10 +7,12 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset = new Vector3(0, 5, -10);
     public Vector3 shakeOffset = Vector3.zero;
 
+    private Vector3 currentFollowPosition;
+
     void LateUpdate()
     {
         Vector3 targetPosition = player.position + offset;
-        transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
-        transform.position += shakeOffset;
+        currentFollowPosition = Vector3.Lerp(currentFollowPosition, targetPosition, speed * Time.deltaTime);
+        transform.position = currentFollowPosition + shakeOffset;
     }
 }
